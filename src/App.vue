@@ -1,32 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      dark
+      app
+      color="transparent"
+      class="d-flex justify-center elevation-0"
+    >
+      <v-toolbar-title>IETCPS : demande de dispense</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main class="my-background">
+      <router-view></router-view>
+    </v-main>
+
+  </v-app>
 </template>
 
+<script>
+export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  }),
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+.my-background {
+  background-image: url('./assets/login-background.jpg');
+  background-size: cover;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
